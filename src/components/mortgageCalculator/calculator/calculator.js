@@ -19,7 +19,7 @@ const trackStyle = {
   height: "14px",
 };
 
-const railStyle = { backgroundColor: "white", height: "14px" };
+const railStyle = { backgroundColor: "white", height: "14px", borderColor: 'red'};
 const Calculator = () => {
   const [purchasePrice, setPurchasePrice] = React.useState(100);
   const [downPayment, setDownPayment] = React.useState(100);
@@ -38,10 +38,10 @@ const Calculator = () => {
           0.01 *
           Math.pow(1 + interestRate * 0.01, repaymentTime))) /
       (Math.pow(1 + interestRate * 0.01, repaymentTime) - 1);
-    setRepaymentPerMonth(Number.parseFloat(result).toFixed(0));  }, [loan, railStyle, interestRate])
+    setRepaymentPerMonth(Number.parseFloat(result).toFixed(0));  }, [loan, repaymentTime, interestRate])
 
   return (
-    <div className="py-16 col-span-6">
+    <div className="py-16">
       <p className="titleCalc font-black text-5xl self-center">
         Mortgage Calculator
       </p>
@@ -49,7 +49,7 @@ const Calculator = () => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore
       </p>
-      <div className="grid grid-cols-2 grid-rows-2 gap-5 py-8">
+      <div className="grid gap-5 py-8 sliders">
         <div>
           <p className="font-black">Purchase Price: ${purchasePrice}</p>
           <Slider

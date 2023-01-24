@@ -4,7 +4,7 @@ import BtnLink from "../../hero/btnLink/btnLink";
 
 const TextBlock = () => {
   return (
-    <div className="col-span-6 py-20 pl-12">
+    <div className="py-20 pl-12">
       <p className="textBlock-title font-black text-6xl self-center text-black mr-0">
         Try our awesome Calculator
       </p>

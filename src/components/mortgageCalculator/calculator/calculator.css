@@ -7,3 +7,18 @@
     max-width: 420px;
         line-height: 180%!important;
 }
+
+@media screen {
+    .sliders {
+        @apply grid-cols-2;
+        @apply grid-rows-2;
+    }
+}
+
+
+@media screen and (max-width: 1024px){
+    .sliders {
+        @apply grid-cols-1;
+        @apply grid-rows-4;
+    }
+}

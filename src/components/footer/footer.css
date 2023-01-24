@@ -1,3 +1,24 @@
 .logo-footer {
     background: #16222D!important;
 }
+
+.footer-left {
+    max-height: 300px;
+}
+.footer-right {
+    max-height: 300px;
+}
+
+@media screen {
+    .footer {
+        @apply grid-cols-2;
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .footer {
+        @apply grid-cols-1;
+        @apply grid-rows-2;
+    }
+}

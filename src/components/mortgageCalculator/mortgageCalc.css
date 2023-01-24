@@ -1,3 +1,22 @@
 .bg-left-right {
     background-image: linear-gradient(to right, #383F50 50%, white 50%);
 }
+
+/*Ipad ngang(1024 x 768)*/
+@media screen and (max-width: 1536px){
+    .calcSection {
+        @apply grid-cols-2;
+        @apply grid-rows-1;
+    }
+    
+}
+
+@media screen and (max-width: 1024px){
+    .calcSection {
+        @apply grid-rows-2;
+        @apply grid-cols-1;    
+    }
+    .bg-left-right {
+        background-image: linear-gradient(to bottom, #383F50 50%, white 50%);
+    }
+}

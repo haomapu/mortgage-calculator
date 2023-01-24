@@ -1,18 +1,38 @@
 .bgImage {
-    position: relative;
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    right: 0;
 }
 
 .vector {
     position: absolute;
     right: 0;
-    top:0;
+    bottom:0;
 }
 
 .vector1 {
-    margin-top: -14.5rem;
-    margin-left: -10.875rem;
+    margin-bottom: 130px;
+    /* margin-left: -10.875rem; */
+    min-width: 782px;
+    min-height: 584px;
+    object-fit: scale-down;
 }
 .vector2 {
+    min-width: 608px;
+    min-height: 482px;
+    object-fit: scale-down;
 
+}
 
+@media screen and (max-width: 480px) {
+    .vector1 {
+        margin-bottom: 50px;
+        min-width: 370px;
+        min-height: 270px;
+    }
+    .vector2 {
+        min-width: 290px;
+        min-height: 188px;
+    }
 }

@@ -10,13 +10,13 @@ const description = "Are you looking for amazing financial services? Don't worry
 
 const Hero = () => {
   return (
-    <div className="">
+    <div className="hero">
         <div className="container mt-32 pb-60 pt-32 ">
             <Title title={title}/>
             <Description description={description}/>
             <BtnLink />
-
         </div>
+        <BgImage></BgImage>
 
     </div>
   );
