@@ -8,7 +8,6 @@ const Header = () => {
         <div className="flex space-x-5">
           <div className="logo flex justify-center">
             <p className="font-extrabold text-2xl self-center">K</p>
-            {/* Chỗ này chưa đúng size*/}
           </div>
 
           <p className="font-bold text-xl self-center">
