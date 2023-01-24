@@ -9,12 +9,6 @@ require("dotenv").config({
 })
 
 module.exports = {
-  siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`,
-  },
-  flags: {
-    DEV_SSR: true,
-  },
   plugins: [
     {
       resolve: `gatsby-source-contentful`,

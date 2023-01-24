@@ -1,33 +1,42 @@
 import * as React from "react";
 import "./intro.css";
-import { graphql } from "gatsby";
+import { useStaticQuery,graphql } from "gatsby";
 import Block from "./block/block";
 
-const titleIntro = "High Quality Output, Awesome Service"
+const titleIntro = "High Quality Output, Awesome Service";
 
-const blocks = graphql`query MyQuery {
-  allContentfulIntroBlock(sort: {title: ASC}) {
-    edges {
-      node {
-        title
-        description {
-          raw
+const Intro = ({ allContentfulIntroBlock }) => {
+  const data = useStaticQuery(graphql`
+  query BlockQuery {
+    allContentfulIntroBlock(sort: {title: ASC}) {
+      edges {
+        node {
+          description {
+            description
+          }
+          title
+          logo {
+            url
+          }
         }
       }
     }
   }
-}`
-console.log(blocks);
-const Intro = () => {
+`);
+console.log(data);
   return (
-    <div className="container pt-40 pb-72" style={{zIndex: 1}}>
-        <p className="font-black text-center leading-21 text-black text-6xl mx-auto" style={{maxWidth: '679px'}}>{titleIntro}</p>
-        <div className="flex gap-x-7 content-center mt-16 blocks flex-wrap">
-          
-          <Block/>
-          <Block/>
-          <Block/>
-        </div>
+    <div className="container pt-40 pb-72" style={{ zIndex: 1 }}>
+      <p
+        className="font-black text-center leading-21 text-black text-6xl mx-auto"
+        style={{ maxWidth: "679px" }}
+      >
+        {titleIntro}
+      </p>
+      <div className="flex gap-x-7 content-center mt-16 blocks flex-wrap">
+        {data.allContentfulIntroBlock.edges.map((node, index)=> {
+            return <Block block={node} key={index}/>
+          })}
+      </div>
     </div>
   );
 };
