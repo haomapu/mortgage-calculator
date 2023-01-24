@@ -13,12 +13,12 @@ if (process.env.STAGING) {
     path: `./.env`,
   })
 }
+
 module.exports = {
   flags: {
     DEV_SSR: true
   },
   plugins: [
-    
     {
       resolve: `gatsby-source-contentful`,
       options: {
