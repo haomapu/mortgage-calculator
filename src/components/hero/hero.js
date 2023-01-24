@@ -31,7 +31,8 @@ const Hero = () => {
     }
   }
   `)
-  console.log(data);
+  if (data) return (null)
+
   const heroComponents =  data.allContentfulHeroComponents.edges[0].node;
   return (
     <div className="hero">

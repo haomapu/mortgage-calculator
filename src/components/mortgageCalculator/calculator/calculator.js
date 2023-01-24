@@ -1,6 +1,5 @@
 import * as React from "react";
 import "./calculator.css";
-import "toolcool-range-slider";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
 
@@ -57,6 +56,7 @@ const Calculator = () => {
             min={100}
             max={1000000}
             step={100}
+            value={purchasePrice}
             onChange={(event) => {
               setPurchasePrice(event)
             }}
@@ -72,6 +72,7 @@ const Calculator = () => {
             min={100}
             max={300000}
             step={100}
+            value={downPayment}
             onChange={(event) => {
               setDownPayment(event);
             }}
@@ -87,6 +88,7 @@ const Calculator = () => {
             min={1}
             max={50}
             step={1}
+            value={repaymentTime}
             onChange={(event) => {
               setRepaymentTime(event);
             }}
@@ -102,6 +104,7 @@ const Calculator = () => {
             min={1}
             max={15}
             step={1}
+            value={interestRate}
             onChange={(event) => {
               setInterestRate(event);
             }}

@@ -11,7 +11,6 @@ const MortgageCalc = () => {
             <Calculator></Calculator>
             <TextBlock></TextBlock>
         </div>
-        
     </div>
   );
 };

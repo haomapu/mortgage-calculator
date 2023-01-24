@@ -23,7 +23,9 @@ const Intro = ({ allContentfulIntroBlock }) => {
     }
   }
 `);
-console.log(data);
+
+if (data) return null
+
   return (
     <div className="container pt-40 pb-72" style={{ zIndex: 1 }}>
       <p
