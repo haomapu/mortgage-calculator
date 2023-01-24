@@ -7,8 +7,17 @@
 body {
     font-family: 'Nunito Sans', sans-serif;
     @apply text-white;
+    @apply font-normal;
+    @apply text-lg;
 }
 
 .bg-dark-blue {
     background: #383F50;
+}
+
+.logo {
+    background:#FF8049;
+    width: 53px;
+    height: 53px;
+    border-radius: 100%;
 }
