@@ -4,12 +4,16 @@
  *     
  * }
  */
-require("dotenv").config({
-  path: `./.env`,
-})
+// require("dotenv").config({
+//   path: `./.env`,
+// })
 
 module.exports = {
+  flags: {
+    DEV_SSR: true
+  },
   plugins: [
+    
     {
       resolve: `gatsby-source-contentful`,
       options: {
