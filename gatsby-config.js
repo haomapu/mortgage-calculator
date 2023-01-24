@@ -4,10 +4,15 @@
  *     
  * }
  */
-require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
-
+if (process.env.STAGING) {
+  require("dotenv").config({
+    path: `.env.${process.env.NODE_ENV}.staging`,
+  })
+} else {
+  require("dotenv").config({
+    path: `./.env`,
+  })
+}
 module.exports = {
   flags: {
     DEV_SSR: true
