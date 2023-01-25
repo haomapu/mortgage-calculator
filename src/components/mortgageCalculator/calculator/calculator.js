@@ -40,7 +40,7 @@ const Calculator = () => {
     setRepaymentPerMonth(Number.parseFloat(result).toFixed(0));  }, [loan, repaymentTime, interestRate])
 
   return (
-    <div className="py-16">
+    <div className="py-16 calculator">
       <p className="titleCalc font-black text-5xl self-center">
         Mortgage Calculator
       </p>

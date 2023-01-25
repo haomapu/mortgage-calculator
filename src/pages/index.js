@@ -5,10 +5,10 @@ import Hero from "../components/hero/hero.js";
 import Intro from "../components/intro/intro.js";
 import MortgageCalc from "../components/mortgageCalculator/mortgageCalc.js";
 import Footer from "../components/footer/footer.js";
-
 import "../styles/global.css"
 import "./index.css";
 
+import Cat from "../components/catAPI/cuteCats.js";
 const IndexPage = () => {
   return (
     <div className="mx-auto">
@@ -20,6 +20,7 @@ const IndexPage = () => {
       <MortgageCalc></MortgageCalc>
 
       <Footer></Footer>
+      <Cat></Cat>
     </div>
   )
 }

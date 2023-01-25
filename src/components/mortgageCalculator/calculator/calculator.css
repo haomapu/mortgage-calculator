@@ -20,5 +20,17 @@
     .sliders {
         @apply grid-cols-1;
         @apply grid-rows-4;
+
     }
 }
+@media screen and (max-width: 480px){
+    .sliders {
+        @apply grid-cols-1;
+        @apply grid-rows-4;
+    }
+    .calculator {
+        padding-left: 3rem;
+
+    }
+}
+
