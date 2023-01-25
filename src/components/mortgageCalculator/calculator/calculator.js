@@ -20,10 +20,10 @@ const trackStyle = {
 
 const railStyle = { backgroundColor: "white", height: "14px", borderColor: 'red'};
 const Calculator = () => {
-  const [purchasePrice, setPurchasePrice] = React.useState(100);
-  const [downPayment, setDownPayment] = React.useState(100);
-  const [repaymentTime, setRepaymentTime] = React.useState(1);
-  const [interestRate, setInterestRate] = React.useState(1);
+  const [purchasePrice, setPurchasePrice] = React.useState(360000);
+  const [downPayment, setDownPayment] = React.useState(154000);
+  const [repaymentTime, setRepaymentTime] = React.useState(30);
+  const [interestRate, setInterestRate] = React.useState(6);
   const [loan, setLoan] = React.useState(1);
   const [repaymentPerMonth, setRepaymentPerMonth] = React.useState(0);
 
